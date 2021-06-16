@@ -1,4 +1,4 @@
-## Program that displays all prime numbers from 1 to 250 and stores the results in results.txt
+## Program that displays all prime numbers in a given range and stores the results in results.txt
 
 ## Sub-function
 ## Check if a number is prime, return Boolean value
@@ -6,7 +6,7 @@ def primeCheck(number):
     isPrime = False
     if number == 2:
         isPrime = True
-    if number > 2 and number % 2 != 0:    # Primes must be greater than 1 and not even
+    elif number > 2 and number % 2 != 0:    # Primes must be greater than 1 and not even
         for i in range(2, (number//2)):   # Any number greater than half the prime cannot be its factor
             if (number % i) == 0:         # Disregard if number is divisible by any value besides 1 and itself
                 break
